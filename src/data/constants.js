@@ -147,8 +147,8 @@ export const projects = [
       "RESTful APIs",
     ],
     category: "Web Application",
-    github: "https://github.com/akashravi95",  // GitHub profile link
-    webapp: "",  // Add live web app link here if available
+    github: "https://github.com/akashravi95",
+    webapp: "", // Replace with live web app link if available
   },
   {
     id: 1,
@@ -167,8 +167,8 @@ export const projects = [
       "Spring Security",
     ],
     category: "Web Application",
-    github: "https://github.com/akashravi95",  // GitHub profile link
-    webapp: "",  // Add live web app link here if available
+    github: "https://github.com/akashravi95",
+    webapp: "", // Replace with live web app link if available
   },
   {
     id: 2,
@@ -180,8 +180,8 @@ export const projects = [
       "https://pixbitsolutions.com/_next/image?url=https%3A%2F%2Fae.cms.pixbit.in%2Fuploads%2FBLOG_1677044255_ab70ab3bef.jpg&w=1920&q=75",
     tags: ["Angular", "Spring Boot", "MySQL", "JWT Authentication"],
     category: "Web Application",
-    github: "https://github.com/akashravi95",  // GitHub profile link
-    webapp: "",  // Add live web app link here if available
+    github: "https://github.com/akashravi95",
+    webapp: "", // Replace with live web app link if available
   },
   {
     id: 3,
@@ -193,8 +193,8 @@ export const projects = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWx-fYXhIM0x9dL1GPa-1YoeYwslJFhi4Wrw&s",
     tags: ["React.js", "Spring Boot", "MySQL", "RESTful APIs"],
     category: "Web Application",
-    github: "https://github.com/akashravi95",  // GitHub profile link
-    webapp: "",  // Add live web app link here if available
+    github: "https://github.com/akashravi95",
+    webapp: "", // Replace with live web app link if available
   },
   {
     id: 4,
@@ -213,8 +213,8 @@ export const projects = [
       "JWT",
     ],
     category: "E-commerce",
-    github: "https://github.com/akashravi95",  // GitHub profile link
-    webapp: "",  // Add live web app link here if available
+    github: "https://github.com/akashravi95",
+    webapp: "", // Replace with live web app link if available
   },
   {
     id: 5,
@@ -226,7 +226,7 @@ export const projects = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmYgG3hghf7pxT4BuH-Ut8evmfpiOr93ds3w&s",
     tags: ["React.js", "HTML5", "CSS3", "JavaScript"],
     category: "Web Application",
-    github: "https://github.com/akashravi95",  // GitHub profile link
-    webapp: "",  // Add live web app link here if available
+    github: "https://github.com/akashravi95",
+    webapp: "", // Replace with live web app link if available
   },
 ];

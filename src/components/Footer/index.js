@@ -10,7 +10,9 @@ const FooterContainer = styled.div`
   padding: 2rem 0;
   display: flex;
   justify-content: center;
+  //background: linear-gradient(100.26deg, rgba(0, 102, 255, 0.05) 42.33%, rgba(150, 0, 225, 0.05) 127.07%);
 `;
+
 
 const FooterWrapper = styled.footer`
   width: 100%;
@@ -37,7 +39,6 @@ const Nav = styled.nav`
   flex-direction: row;
   gap: 2rem;
   justify-content: center;
-
   @media (max-width: 768px) {
     flex-wrap: wrap;
     gap: 1rem;
@@ -48,15 +49,13 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled.a`
-  color: ${({ theme }) => theme.text_primary};
+color: ${({ theme }) => theme.text_primary};
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.2s ease-in-out;
-
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
-
   @media (max-width: 768px) {
     font-size: 1rem;
   }
@@ -73,7 +72,6 @@ const SocialMediaIcon = styled.a`
   font-size: 1.5rem;
   color: ${({ theme }) => theme.text_primary};
   transition: color 0.2s ease-in-out;
-
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
@@ -99,22 +97,15 @@ function Footer() {
           <NavLink href="#education">Education</NavLink>
         </Nav>
         <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.facebook || "#"} target="_blank" rel="noopener noreferrer">
-            <FacebookIcon />
-          </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.twitter || "#"} target="_blank" rel="noopener noreferrer">
-            <TwitterIcon />
-          </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.linkedin || "#"} target="_blank" rel="noopener noreferrer">
-            <LinkedInIcon />
-          </SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta || "#"} target="_blank" rel="noopener noreferrer">
-            <InstagramIcon />
-          </SocialMediaIcon>
+          <SocialMediaIcon href={Bio.facebook} target="display"><FacebookIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={Bio.twitter} target="display"><TwitterIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2024 AKASH R S. All rights reserved.
+          &copy; 2023 Akash R S. All rights reserved.
         </Copyright>
+
       </FooterWrapper>
     </FooterContainer>
   );
