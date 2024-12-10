@@ -1,7 +1,7 @@
-import React from "react";
-import { Container, Wrapper, Title, Desc, CardContainer } from "./ProjectsStyle";
-import ProjectCard from "../Cards/ProjectCards";
-import { projects } from "../../data/constants";
+import React from 'react'
+import { Container, Wrapper, Title, Desc, CardContainer } from './ProjectsStyle'
+import ProjectCard from '../Cards/ProjectCards'
+import { projects } from '../../data/constants'
 
 const Projects = ({ openModal, setOpenModal }) => {
   return (
@@ -9,21 +9,21 @@ const Projects = ({ openModal, setOpenModal }) => {
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          I have worked on a wide range of projects. Here are some of my projects.
+          I have worked on a wide range of projects. From web apps to android apps. Here are some of my projects.
         </Desc>
         <CardContainer>
           {projects.map((project) => (
-            <ProjectCard
-              key={project.id} // Added a unique key for each project
-              project={project}
-              openModal={openModal}
-              setOpenModal={setOpenModal}
+            <ProjectCard 
+              key={project.id} // assuming project has an 'id' field for unique key
+              project={project} 
+              openModal={openModal} 
+              setOpenModal={setOpenModal} 
             />
           ))}
         </CardContainer>
       </Wrapper>
     </Container>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

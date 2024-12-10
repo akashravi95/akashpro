@@ -1,8 +1,11 @@
-import styled from "styled-components";
-import _default from "../../themes/default";
+import React from 'react';
+import styled from 'styled-components';
+import _default from '../../themes/default'; // Importing the default theme object
+
+// Define styled components for HeroSection
 
 export const HeroContainer = styled.div`
-  background: ${({ theme }) => theme.card_light};
+  background: ${({ theme }) => theme.card_light || _default.card_light}; // Fallback to _default if theme is not available
   display: flex;
   justify-content: center;
   position: relative;
@@ -10,7 +13,7 @@ export const HeroContainer = styled.div`
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
-  @media (max-width: 640) {
+  @media (max-width: 640px) {
     padding: 32px 16px;
   }
   z-index: 1;
@@ -54,6 +57,7 @@ export const HeroInnerContainer = styled.div`
     flex-direction: column;
   }
 `;
+
 export const HeroLeftContainer = styled.div`
   width: 100%;
   order: 1;
@@ -99,7 +103,7 @@ export const Img = styled.img`
   max-width: 400px;
   max-height: 400px;
   border-radius: 50%;
-  border: 2px solid ${({ theme }) => theme.primary};
+  border: 2px solid ${({ theme }) => theme.primary || _default.primary}; // Fallback to _default if theme.primary is not available
 
   @media (max-width: 768px) {
     max-width: 400px;
@@ -115,7 +119,7 @@ export const Img = styled.img`
 export const Title = styled.div`
   font-weight: 700;
   font-size: 50px;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.text_primary || _default.text_primary}; // Fallback to _default if theme.text_primary is not available
   line-height: 68px;
   @media (max-width: 960px) {
     text-align: center;
@@ -133,7 +137,7 @@ export const TextLoop = styled.div`
   font-size: 32px;
   display: flex;
   gap: 12px;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.text_primary || _default.text_primary}; // Fallback to _default if theme.text_primary is not available
   line-height: 68px;
   @media (max-width: 960px) {
     text-align: center;
@@ -146,7 +150,7 @@ export const TextLoop = styled.div`
 `;
 
 export const Span = styled.span`
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.primary || _default.primary}; // Fallback to _default if theme.primary is not available
   cursor: pointer;
 `;
 
@@ -154,7 +158,7 @@ export const SubTitle = styled.div`
   font-size: 20px;
   line-height: 32px;
   margin-bottom: 42px;
-  color: ${({ theme }) => theme.text_primary + 95};
+  color: ${({ theme }) => theme.text_primary || _default.text_primary}; // Fallback to _default if theme.text_primary is not available
 
   @media (max-width: 960px) {
     text-align: center;
@@ -167,37 +171,66 @@ export const SubTitle = styled.div`
 `;
 
 export const ResumeButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    width: 95%;
-    max-width: 300px;
-    text-align: center;
-    padding: 16px 0;
-    color:${({ theme }) => theme.white};
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  20px 20px 60px #1F2634,
-    -20px -20px 60px #1F2634;
-    &:hover {
-        transform: scale(1.05);
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  width: 95%;
+  max-width: 300px;
+  text-align: center;
+  padding: 16px 0;
+  color: ${({ theme }) => theme.white || _default.white}; // Fallback to _default if theme.white is not available
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out !important;
+  background: hsla(271, 100%, 50%, 1);
+  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+  box-shadow: 20px 20px 60px #1F2634, -20px -20px 60px #1F2634;
+  &:hover {
+    transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
+    box-shadow: 20px 20px 60px #1F2634;
     filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
+  }
 
+  @media (max-width: 640px) {
+    padding: 12px 0;
+    font-size: 18px;
+  }
 `;
+
+
+// Social Media Components
+const IconsWrapper = styled.div`
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+`;
+
+const Icon = styled.i`
+  font-size: 30px;
+  color: ${({ platform }) => platform === 'facebook' ? '#3b5998' :
+                            platform === 'twitter' ? '#1da1f2' :
+                            platform === 'linkedin' ? '#0077b5' : '#000'};
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+export const SocialMediaIcons = ({ children }) => {
+  return <IconsWrapper>{children}</IconsWrapper>;
+};
+
+export const SocialMediaIcon = ({ platform }) => {
+  return (
+    <Icon
+      platform={platform}
+      className={`fab fa-${platform}`} // Assuming you're using FontAwesome for icons
+    />
+  );
+};
